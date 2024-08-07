@@ -109,7 +109,7 @@ class _GenerateRouteScreenState extends State<GenerateRouteScreen> {
                       onRemove: () {
                         setState(() {
                           _destinationControllers.removeAt(index);
-                          if (_destinationControllers.isEmpty) {
+                          if (_destinationControllers.length == 2) {
                             _hasOneDestination = true;
                           }
                         });
