@@ -64,7 +64,7 @@ class _GenerateRouteScreenState extends State<GenerateRouteScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         children: [
           /// Təyinat nöqtəsi 1 ünvandısa normal halda yerləşir
           if (_hasOneDestination) ...[
@@ -112,13 +112,6 @@ class _GenerateRouteScreenState extends State<GenerateRouteScreen> {
                           if (_destinationControllers.length == 2) {
                             _hasOneDestination = true;
                           }
-                        });
-                      },
-                      onDrag: () {
-                        setState(() {
-                          _hasOneDestination = true;
-                          _destinationController.text = _destinationControllers[index].text;
-                          _destinationControllers.removeAt(index);
                         });
                       },
                     ),
